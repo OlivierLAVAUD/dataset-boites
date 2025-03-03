@@ -20,9 +20,9 @@ Ce projet a pour objectif de créer une base de données relationnelle en Postgr
 
 1.  **Clonez le dépôt :**
 
-    ```
-    git clone <URL_DU_DEPOT>
-    cd <NOM_DU_DEPOT>
+    ```bash
+    git clone https://github.com/OlivierLAVAUD/dataset-boites.git
+    cd dataset-boites
     ```
 
 2.  **Créez un fichier `.env` (facultatif) :**
