@@ -56,11 +56,12 @@ Ce projet a pour objectif de créer une base de données relationnelle en Postgr
     Vous pouvez maintenant accéder à la base de données PostgreSQL depuis votre machine hôte en utilisant un client SQL (comme pgAdmin, Dbeaver, etc.) et en vous connectant à `localhost:5432` avec les informations d'identification que vous avez définies (soit dans le fichier `.env`, soit par défaut dans le `docker-compose.yml`).
 
 ## Structure du projet
-
+ ```bash
 ├── docker-compose.yml # Configuration Docker Compose
 ├── Dockerfile # Configuration Docker
 ├── init.sql # Script SQL pour la création de la base de données
 ├── README.md # Ce fichier
+ ```
 
 
 ## Description des fichiers
@@ -73,7 +74,7 @@ Ce projet a pour objectif de créer une base de données relationnelle en Postgr
 ## Diagramme du Modèle Logique des Données (MLD)
 
 * visualisez le langage de description ci dessous avec https://dbdiagram.io/d
-
+![app](images/image.png)
 
 Table CLIENTS {
   id_client VARCHAR(6) [pk, unique, note: 'Format: xx-123']
