@@ -1,17 +1,26 @@
-version: "3.8"
-
 services:
   db:
     image: postgres:latest
-    restart: always
-    ports:
-      - "5432:5432" # Exposition du port 5432
+    container_name: postgres_container
     environment:
-      POSTGRES_USER: mon_utilisateur
-      POSTGRES_PASSWORD: mon_mot_de_passe
-      POSTGRES_DB: ma_base_de_donnees
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: yourpassword
+      POSTGRES_DB: mydatabase
+    ports:
+      - "5432:5432"
     volumes:
-      - db_data:/var/lib/postgresql/data
+      - postgres_data:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin_container
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:5050"
+    depends_on:
+      - db
 
 volumes:
-  db_data:
+  postgres_data:

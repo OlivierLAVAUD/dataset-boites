@@ -9,6 +9,10 @@ Ce projet a pour objectif de créer une base de données relationnelle en Postgr
 *   Automatiser la logique de gestion des contraintes.
 *   Produire des analyses basiques pour valider la cohérence et l'utilité de la base de données.
 
+## Auteur
+
+© 2025 Olivier LAVAUD
+
 ![app](images/image.png)
 
 ## Prérequis
@@ -39,7 +43,7 @@ Ce projet a pour objectif de créer une base de données relationnelle en Postgr
 
 3.  **Lancez le conteneur avec Docker Compose :**
 
-    ```
+    ```bash
     docker-compose up -d
     ```
 
@@ -73,8 +77,10 @@ Ce projet a pour objectif de créer une base de données relationnelle en Postgr
 
 ## Diagramme du Modèle Logique des Données (MLD)
 
-* visualisez le langage de description ci dessous avec https://dbdiagram.io/d
+
 ![app](images/image.png)
+
+* visualisez le langage de description ci-dessous avec https://dbdiagram.io/d
 
 Table CLIENTS {
   id_client VARCHAR(6) [pk, unique, note: 'Format: xx-123']
@@ -139,7 +145,5 @@ Ref: LIGNES_COMMANDE.id_boite < BOITES.id_boite
 *   **Calcul de prix :** La surface extérieure est calculée et stockée. Le brief mentionne un tarif dégressif en fonction des quantités, ce qui est implémenté dans la table `LIGNES_COMMANDE` avec le champ `taux_remise`.
 *   **Personnalisation :** La matière et la couleur sont gérées, et la table `MATIERE_COULEURS` permet de gérer les couleurs spécifiques à certaines matières.
 
-## Auteur
 
-© 2025 Olivier LAVAUD
 

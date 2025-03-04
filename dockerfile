@@ -1,7 +1,8 @@
+# Utiliser l'image officielle de PostgreSQL
 FROM postgres:latest
 
-ENV POSTGRES_USER=mon_utilisateur
-ENV POSTGRES_PASSWORD=mon_mot_de_passe
-ENV POSTGRES_DB=ma_base_de_donnees
-
+# Copier le script SQL dans le conteneur
 COPY init.sql /docker-entrypoint-initdb.d/
+
+# Exposer le port PostgreSQL
+EXPOSE 5432
