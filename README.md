@@ -23,6 +23,7 @@ or
 
 ## Installation et configuration avec Docker
 
+![Docker](images/image2.png)
 1.  **Clonez le dépôt :**
 
     ```bash
