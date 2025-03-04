@@ -17,8 +17,9 @@ Ce projet a pour objectif de créer une base de données relationnelle en Postgr
 
 ## Prérequis
 
-*   Docker
-*   Docker Compose
+*   [Docker Desktop](https://www.docker.com/products/docker-desktop/) pour un deploiement par conteneur
+or 
+*   [Postgres Database Server] ( https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) pour une utilisation locale sous Windows ou Linux
 
 ## Installation et configuration
 
@@ -57,7 +58,10 @@ Ce projet a pour objectif de créer une base de données relationnelle en Postgr
 
 4.  **Accédez à la base de données :**
 
-    Vous pouvez maintenant accéder à la base de données PostgreSQL depuis votre machine hôte en utilisant un client SQL (comme pgAdmin, Dbeaver, etc.) et en vous connectant à `localhost:5432` avec les informations d'identification que vous avez définies (soit dans le fichier `.env`, soit par défaut dans le `docker-compose.yml`).
+    Vous pouvez maintenant accéder à la base de données PostgreSQL depuis votre machine avec la commande:
+    ```bash
+    docker exec -it postgres_container psql -U postgres -d mydatabase
+    ```
 
 ## Structure du projet
  ```bash
