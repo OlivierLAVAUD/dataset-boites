@@ -21,7 +21,7 @@ Ce projet a pour objectif de créer une base de données relationnelle en Postgr
 or 
 *   [Postgres Database Server] ( https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) pour une utilisation locale sous Windows ou Linux
 
-## Installation et configuration
+## Installation et configuration avec Docker
 
 1.  **Clonez le dépôt :**
 
@@ -62,6 +62,7 @@ or
     ```bash
     docker exec -it postgres_container psql -U postgres -d mydatabase
     ```
+
 
 ## Structure du projet
  ```bash
