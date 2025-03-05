@@ -23,7 +23,7 @@ or
 
 ## Installation et configuration avec Docker
 
-![Docker](images/image2.png)
+
 1.  **Clonez le dépôt :**
 
     ```bash
@@ -48,14 +48,17 @@ or
     ```bash
     docker-compose up -d
     ```
+![app](images/image5.png)
 
     Cette commande va :
 
     *   Créer et démarrer un conteneur PostgreSQL en utilisant l'image `postgres:latest`.
     *   Définir les variables d'environnement (utilisateur, mot de passe, nom de la base de données).
     *   Exposer le port 5432 pour permettre l'accès à la base de données.
-    *   Exécuter le script SQL `init.sql` pour créer la base de données et les tables.
+    *   Exécuter le script SQL `sql/databox.sql` pour créer la base de données et les tables.
     *   Créer un volume Docker pour stocker les données de la base de données de manière persistante.
+
+![Docker](images/image2.png)
 
 4.  **Accédez à la base de données et effectuer des requêtes SQL:**
 
@@ -72,7 +75,6 @@ or
 
 6. **Executer des requetes directement à partir d'une interface SQL avec gradio en frontend:**
 
-![app](images/image5.png)
     Vous pouvez maintenant accéder à l'application app et interoger la base de données PostgreSQL depuis votre navigateur [http://localhost:7860](http://localhost:7860/)
 
 ![app](images/image4.png)
