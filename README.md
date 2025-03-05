@@ -75,11 +75,44 @@ or
     ```
 ![app](images/image3.png)
 
-6. **Executer des requetes directement à partir d'une interface SQL avec gradio en frontend:**
+6. **Exécutez des requetes directement à partir d'une interface SQL avec gradio en frontend:**
 
     Vous pouvez maintenant accéder à l'application app et intérroger la base de données PostgreSQL depuis votre navigateur [http://localhost:7860](http://localhost:7860/)
 
 ![app](images/image4.png)
+
+6. **Exécutez des requetes directement à partir de l' interface Pgadmin**
+
+![app](images/image7.png)
+
+  Vous pouvez maintenant accéder à l'application Pgadmin et intérroger la base de données PostgreSQL depuis votre navigateur [http://localhost:5050](http://localhost:5050/)
+
+- Configuration Initiale
+    Server Name [PostgreSQL]
+    Nom d'hôte / Adresse [db] 
+    Port [5432]
+    Base de données [mydatabase]
+    Utilisateur [postgres]
+    Mot de passe [yourpassword]
+    Rôle []
+    Service []
+
+
+7. **Realisez des graphiques et des Dashboards à partir de l' interface Graphana**
+
+![app](images/image9.png)
+
+  Vous pouvez maintenant accéder à l'application Pgadmin et intérroger la base de données PostgreSQL depuis votre navigateur [http://localhost:3000](http://localhost:3000)
+
+- Connexion à Grafana
+    Utilisateur [admin]
+    Mot de passe [admin]
+
+- Ajouter la source de données db
+![app](images/image12.png)
+
+- Créez des DashBoards
+![alt text](image13.png)
 
 
 ## Diagramme du Modèle Logique des Données (MLD)
@@ -87,7 +120,6 @@ or
 * visualisez le fichier MLD.dbml avec https://dbdiagram.io/d
 
 ![app](images/image.png)
-
 
 
 ## Points Clés du Brief Respectés

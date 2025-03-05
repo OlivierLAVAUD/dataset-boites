@@ -18,30 +18,8 @@ services:
       DATABASE_URL: postgres://postgres:yourpassword@db:5432/mydatabase
     ports:
       - "7860:7860"
-    depends_on:
-      - db
-
-  pgadmin:
-    image: dpage/pgadmin4
-    container_name: pgadmin
-    environment:
-      PGADMIN_DEFAULT_EMAIL: admin@example.com
-      PGADMIN_DEFAULT_PASSWORD: admin
-    ports:
-      - "5050:80"
-    depends_on:
-      - db
-
-  grafana:
-    image: grafana/grafana
-    container_name: grafana
-    ports:
-      - "3000:3000"
-    volumes:
-      - grafana_data:/var/lib/grafana
-    depends_on:
+    depends_on: 
       - db
 
 volumes:
   postgres_data:
-  grafana_data:
