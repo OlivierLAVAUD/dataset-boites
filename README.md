@@ -77,7 +77,7 @@ or
 
 6. **Executer des requetes directement à partir d'une interface SQL avec gradio en frontend:**
 
-    Vous pouvez maintenant accéder à l'application app et interoger la base de données PostgreSQL depuis votre navigateur [http://localhost:7860](http://localhost:7860/)
+    Vous pouvez maintenant accéder à l'application app et intérroger la base de données PostgreSQL depuis votre navigateur [http://localhost:7860](http://localhost:7860/)
 
 ![app](images/image4.png)
 
