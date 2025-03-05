@@ -57,11 +57,16 @@ or
     *   Exécuter le script SQL `init.sql` pour créer la base de données et les tables.
     *   Créer un volume Docker pour stocker les données de la base de données de manière persistante.
 
-4.  **Accédez à la base de données :**
+4.  **Accédez à la base de données et effectuer des requêtes SQL:**
 
     Vous pouvez maintenant accéder à la base de données PostgreSQL depuis votre machine avec la commande:
     ```bash
     docker exec -it postgres_container psql -U postgres -d mydatabase
+    ```
+
+5.  **Executer des requetes sql à partir de fichier sql:**
+    ```bash
+        docker exec -it postgres_container psql -U postgres -d mydatabase -f docker-entrypoint-initdb.d/init.sql
     ```
 
 
@@ -88,6 +93,7 @@ or
 
 * visualisez le langage de description ci-dessous avec https://dbdiagram.io/d
 
+```dbdiagram
 Table CLIENTS {
   id_client VARCHAR(6) [pk, unique, note: 'Format: xx-123']
   nom_client VARCHAR(255)
@@ -141,9 +147,8 @@ Ref: BOITES.id_couleur < COULEURS.id_couleur
 Ref: COMMANDES.id_client < CLIENTS.id_client
 Ref: LIGNES_COMMANDE.id_commande < COMMANDES.id_commande
 Ref: LIGNES_COMMANDE.id_boite < BOITES.id_boite
-
-
-
+```
+ 
 ## Points Clés du Brief Respectés
 
 *   **Modélisation :** Les relations entre clients, commandes et boîtes sont correctement modélisées.
