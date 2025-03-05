@@ -82,85 +82,14 @@ or
 ![app](images/image4.png)
 
 
-## Structure du projet
- ```bash
-├── docker-compose.yml # Configuration Docker Compose
-├── Dockerfile # Configuration Docker
-├── init.sql # Script SQL pour la création de la base de données
-├── README.md # Ce fichier
- ```
-
-
-## Description des fichiers
-
-*   **`docker-compose.yml` :** Ce fichier définit la configuration du conteneur Docker pour la base de données PostgreSQL. Il spécifie l'image à utiliser, les variables d'environnement, le mapping des ports et les volumes.
-*   **`Dockerfile` :** Ce fichier décrit comment construire une image Docker personnalisée. Dans ce projet, il est utilisé pour copier le script SQL `init.sql` dans le conteneur.
-*   **`init.sql` :** Ce fichier contient le script SQL qui sera exécuté lors du premier démarrage du conteneur pour créer la base de données, les tables, les contraintes, les triggers et les vues.
-*   **`README.md` :** Ce fichier fournit des instructions sur la configuration et l'exécution du projet.
-
 ## Diagramme du Modèle Logique des Données (MLD)
 
+* visualisez le fichier MLD.dbml avec https://dbdiagram.io/d
 
 ![app](images/image.png)
 
-* visualisez le MLD avec langage de description ci-dessous (MLD.dbml) avec https://dbdiagram.io/d
 
-```dbdiagram
-Table CLIENTS {
-  id_client VARCHAR(6) [pk, unique, note: 'Format: xx-123']
-  nom_client VARCHAR(255)
-  email_client VARCHAR(255)
-  adresse_client TEXT
-}
 
-Table MATIERES {
-  id_matiere INT [pk, increment]
-  nom_matiere VARCHAR(255) [unique]
-}
-
-Table COULEURS {
-  id_couleur INT [pk, increment]
-  nom_couleur VARCHAR(255) [unique]
-}
-
-Table MATIERE_COULEURS {
-  id_matiere INT [pk]
-  id_couleur INT [pk]
-}
-
-Table BOITES {
-  id_boite INT [pk, increment]
-  id_matiere INT
-  id_couleur INT
-  longueur_mm INT [note: 'Max: 1000']
-  largeur_mm INT [note: 'Max: 1000']
-  hauteur_mm INT [note: 'Max: 1000']
-  surface_exterieure_mm2 DECIMAL(15,2)
-}
-
-Table COMMANDES {
-  id_commande INT [pk, increment]
-  id_client VARCHAR(6)
-  date_commande DATE
-}
-
-Table LIGNES_COMMANDE {
-  id_commande INT [pk]
-  id_boite INT [pk]
-  quantite INT
-  prix_unitaire DECIMAL(10,2)
-  taux_remise DECIMAL(5,2)
-}
-
-Ref: MATIERE_COULEURS.id_matiere < MATIERES.id_matiere
-Ref: MATIERE_COULEURS.id_couleur < COULEURS.id_couleur
-Ref: BOITES.id_matiere < MATIERES.id_matiere
-Ref: BOITES.id_couleur < COULEURS.id_couleur
-Ref: COMMANDES.id_client < CLIENTS.id_client
-Ref: LIGNES_COMMANDE.id_commande < COMMANDES.id_commande
-Ref: LIGNES_COMMANDE.id_boite < BOITES.id_boite
-```
- 
 ## Points Clés du Brief Respectés
 
 *   **Modélisation :** Les relations entre clients, commandes et boîtes sont correctement modélisées.
