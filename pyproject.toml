@@ -1,7 +1,10 @@
 [project]
-name = "dataset-boites"
+name = "databox"
 version = "0.1.0"
-description = "Positionnement DATA ENGINEER. Olivier LAVAUD"
+description = "a Python app with Gradio Frontend and PostreSQL database Backend"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "gradio>=5.20.0",
+    "psycopg2-binary>=2.9.10",
+]
