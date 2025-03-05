@@ -113,30 +113,81 @@ JOIN
 JOIN
     COULEURS c ON b.id_couleur = c.id_couleur;
 
--- Insertion de données exemples (Exemple)
+-- Insertion de 7 matières
+INSERT INTO MATIERES (nom_matiere) VALUES
+('Plastique'),
+('Bois'),
+('Métal'),
+('Carton'),
+('Verre'),
+('Céramique'),
+('Tissu');
+
+-- Insertion de 7 couleurs
+INSERT INTO COULEURS (nom_couleur) VALUES
+('Rouge'),
+('Bleu'),
+('Vert'),
+('Jaune'),
+('Noir'),
+('Blanc'),
+('Violet');
+
+-- Insertion de 7 clients
 INSERT INTO CLIENTS (id_client, nom_client, email_client, adresse_client) VALUES
 ('ab-123', 'Alice Smith', 'alice@example.com', '123 Rue Principale'),
-('cd-456', 'Bob Johnson', 'bob@example.com', '456 Avenue du Chêne');
+('cd-456', 'Bob Johnson', 'bob@example.com', '456 Avenue du Chêne'),
+('ef-789', 'Charlie Brown', 'charlie@example.com', '789 Boulevard des Roses'),
+('gh-101', 'Diana Prince', 'diana@example.com', '101 Rue de la Paix'),
+('ij-112', 'Evan Davis', 'evan@example.com', '112 Avenue des Lilas'),
+('kl-131', 'Fiona Green', 'fiona@example.com', '131 Rue des Érables'),
+('mn-415', 'George White', 'george@example.com', '415 Boulevard du Soleil');
 
-INSERT INTO MATIERES (nom_matiere) VALUES ('Plastique'), ('Bois'), ('Métal');
-
-INSERT INTO COULEURS (nom_couleur) VALUES ('Rouge'), ('Bleu'), ('Vert');
-
-INSERT INTO MATIERE_COULEURS (id_matiere, id_couleur) VALUES
-(1,1), -- Le plastique peut être Rouge
-(1,2), -- Le plastique peut être Bleu
-(2,3), -- Le bois peut être Vert
-(3,1); -- Le métal peut être Rouge
-
+-- Insertion de 7 boîtes
 INSERT INTO BOITES (id_matiere, id_couleur, longueur_mm, largeur_mm, hauteur_mm) VALUES
-(1,1,100,150,50);
+(1, 1, 100, 150, 50),   -- Plastique Rouge
+(2, 3, 200, 200, 100),  -- Bois Vert
+(3, 5, 300, 150, 200),  -- Métal Noir
+(4, 2, 250, 250, 250),  -- Carton Bleu
+(5, 6, 150, 150, 150),  -- Verre Blanc
+(6, 4, 100, 100, 100),  -- Céramique Jaune
+(7, 7, 200, 100, 50);   -- Tissu Violet
 
-INSERT INTO COMMANDES (id_client, date_commande) VALUES
-('ab-123', '2024-11-15');
+-- Insertion de 7 commandes par client (soit 49 commandes au total)
+DO $$
+DECLARE
+    client_id VARCHAR(6);
+    i INT;
+BEGIN
+    FOR client_id IN SELECT id_client FROM CLIENTS LOOP
+        FOR i IN 1..7 LOOP
+            INSERT INTO COMMANDES (id_client, date_commande)
+            VALUES (client_id, '2024-01-01'::DATE + (i || ' days')::INTERVAL);
+        END LOOP;
+    END LOOP;
+END $$ LANGUAGE plpgsql;
 
-INSERT INTO LIGNES_COMMANDE (id_commande, id_boite, quantite, prix_unitaire, taux_remise) VALUES
-(1,1,2,15.50,0.10);
+-- Insertion de 7 lignes de commande par commande (soit 343 lignes de commande au total)
+DO $$
+DECLARE
+    commande_id INT;
+    boite_id INT;
+    j INT;
+BEGIN
+    FOR commande_id IN SELECT id_commande FROM COMMANDES LOOP
+        FOR j IN 1..7 LOOP
+            boite_id := (commande_id + j - 1) % 7 + 1; -- Associe chaque ligne à une boîte différente
+            INSERT INTO LIGNES_COMMANDE (id_commande, id_boite, quantite, prix_unitaire, taux_remise)
+            VALUES (
+                commande_id,
+                boite_id,
+                (commande_id + j) % 5 + 1, -- Quantité entre 1 et 5
+                10.00 + ((commande_id + j) % 10), -- Prix unitaire entre 10.00 et 19.00
+                0.10 * ((commande_id + j) % 3) -- Taux de remise entre 0.00 et 0.20
+            );
+        END LOOP;
+    END LOOP;
+END $$ LANGUAGE plpgsql;
 
 -- Exemple d'utilisation de la vue
 SELECT * FROM boites_details;
-

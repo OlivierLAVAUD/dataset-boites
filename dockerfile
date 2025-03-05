@@ -2,7 +2,7 @@
 FROM postgres:latest
 
 # Copier le script SQL dans le conteneur
-COPY init.sql /docker-entrypoint-initdb.d/
+COPY sql/databox.sql /docker-entrypoint-initdb.d/
 
 # Exposer le port PostgreSQL
 EXPOSE 5432
