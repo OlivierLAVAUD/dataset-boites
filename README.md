@@ -81,13 +81,14 @@ or
 
 ![app](images/image4.png)
 
-6. **Exécutez des requetes directement à partir de l' interface Pgadmin**
+6. **Gérez la base de données avec l'interface pgAdmin**
 
 ![app](images/image7.png)
 
   Vous pouvez maintenant accéder à l'application Pgadmin et intérroger la base de données PostgreSQL depuis votre navigateur [http://localhost:5050](http://localhost:5050/)
 
-- Configuration Initiale
+- Paramétrage initial
+```bash
     Server Name [PostgreSQL]
     Nom d'hôte / Adresse [db] 
     Port [5432]
@@ -96,6 +97,7 @@ or
     Mot de passe [yourpassword]
     Rôle []
     Service []
+```
 
 
 7. **Realisez des graphiques et des Dashboards à partir de l' interface Graphana**
@@ -112,7 +114,7 @@ or
 ![app](images/image12.png)
 
 - Créez des DashBoards
-![alt text](image13.png)
+![Grafana](images/image13.png)
 
 
 ## Diagramme du Modèle Logique des Données (MLD)
