@@ -64,12 +64,12 @@ or
 
     Vous pouvez maintenant accéder à la base de données PostgreSQL depuis votre machine avec la commande:
     ```bash
-    docker exec -it postgres_container psql -U postgres -d mydatabase
+    docker exec -it postgreSQL_db psql -U postgres -d mydatabase
     ```
 
 5.  **Executer des requetes sql à partir de fichier sql:**
     ```bash
-        docker exec -it postgres_container psql -U postgres -d mydatabase -f docker-entrypoint-initdb.d/init.sql
+        docker exec -it postgreSQL_db psql -U postgres -d mydatabase -f docker-entrypoint-initdb.d/databox.sql
     ```
 ![app](images/image3.png)
 
