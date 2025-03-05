@@ -68,7 +68,7 @@ or
     ```bash
         docker exec -it postgres_container psql -U postgres -d mydatabase -f docker-entrypoint-initdb.d/init.sql
     ```
-
+![app](images/image3.png)
 
 ## Structure du projet
  ```bash
