@@ -91,7 +91,7 @@ or
 
 ![app](images/image.png)
 
-* visualisez le langage de description ci-dessous avec https://dbdiagram.io/d
+* visualisez le MLD avec langage de description ci-dessous (MLD.dbml) avec https://dbdiagram.io/d
 
 ```dbdiagram
 Table CLIENTS {
