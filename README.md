@@ -70,6 +70,14 @@ or
     ```
 ![app](images/image3.png)
 
+6. **Executer des requetes directement à partir d'une interface SQL AVEC gradio:**
+
+![app](images/image5.png)
+    Vous pouvez maintenant accéder à l'application app et interoger la base de données PostgreSQL depuis votre machine avec [cliquant accédant avec la commande:](http://localhost:7860/)
+
+![app](images/image4.png)
+
+
 ## Structure du projet
  ```bash
 ├── docker-compose.yml # Configuration Docker Compose
