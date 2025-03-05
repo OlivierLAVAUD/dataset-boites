@@ -70,7 +70,7 @@ or
     ```
 ![app](images/image3.png)
 
-6. **Executer des requetes directement à partir d'une interface SQL AVEC gradio:**
+6. **Executer des requetes directement à partir d'une interface SQL avec gradio en frontend:**
 
 ![app](images/image5.png)
     Vous pouvez maintenant accéder à l'application app et interoger la base de données PostgreSQL depuis votre navigateur [http://localhost:7860](http://localhost:7860/)
