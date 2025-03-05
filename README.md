@@ -48,8 +48,6 @@ or
     ```bash
     docker-compose up -d
     ```
-![app](images/image5.png)
-
     Cette commande va :
 
     *   Créer et démarrer un conteneur PostgreSQL en utilisant l'image `postgres:latest`.
@@ -59,6 +57,8 @@ or
     *   Créer un volume Docker pour stocker les données de la base de données de manière persistante.
 
 ![Docker](images/image2.png)
+
+![app](images/image5.png)
 
 4.  **Accédez à la base de données et effectuer des requêtes SQL:**
 
