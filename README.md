@@ -51,7 +51,7 @@ or
     Cette commande va :
 
     *   Créer et démarrer un conteneur PostgreSQL_db en utilisant l'image `postgres:latest`.
-    *   Créer et démarrer un conteneur databox_app et creer un connexion avec l'url de la base de donnée: postgres://postgres:yourpassword@db:5432/mydatabase .
+    *   Créer et démarrer un conteneur databox_app et creer un connexion avec l'url de la base de donnée: `postgres://postgres:yourpassword@db:5432/mydatabase` .
     *   Définir les variables d'environnement (utilisateur, mot de passe, nom de la base de données).
     *   Exposer le port 5432 pour permettre l'accès à la base de données.
     *   Exposer le port 7860 pour permettre l'accès à l'interface frontend Gradio.
