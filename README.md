@@ -49,7 +49,7 @@ Ce projet a pour objectif de créer une base de données relationnelle en Postgr
     docker exec -it postgreSQL_db psql -U postgres -d mydatabase
     ```
 
-5.  **Executer des requetes sql à partir de fichier sql:**
+5.  **Exécutez des requêtes partir de fichier sql:**
 
     ```bash
         docker exec -it postgreSQL_db psql -U postgres -d mydatabase -f docker-entrypoint-initdb.d/databox.sql
