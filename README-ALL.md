@@ -18,8 +18,11 @@ Ce projet a pour objectif de créer une base de données relationnelle en Postgr
 ## Prérequis
 
 *   [Docker Desktop](https://www.docker.com/products/docker-desktop/) pour un deploiement par conteneur
+or 
+*   [Postgres Database Server] ( https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) pour une utilisation locale sous Windows ou Linux
 
-## Installation
+## Installation et configuration avec Docker
+
 
 1.  **Clonez le dépôt :**
 
@@ -28,13 +31,36 @@ Ce projet a pour objectif de créer une base de données relationnelle en Postgr
     cd dataset-boites
     ```
 
+2.  **Créez un fichier `.env` (facultatif) :**
+
+    Si vous souhaitez personnaliser les variables d'environnement (utilisateur, mot de passe, nom de la base de données), créez un fichier `.env` à la racine du projet et définissez les variables suivantes :
+
+    ```
+    POSTGRES_USER=mon_utilisateur
+    POSTGRES_PASSWORD=mon_mot_de_passe
+    POSTGRES_DB=ma_base_de_donnees
+    ```
+
+    Si vous ne créez pas ce fichier, les valeurs par défaut définies dans le `docker-compose.yml` seront utilisées.
+
 3.  **Lancez le conteneur avec Docker Compose :**
 
     ```bash
     docker-compose up -d
     ```
+    Cette commande va :
 
-![app](images/image14.png)
+    *   Créer et démarrer un conteneur PostgreSQL_db en utilisant l'image `postgres:latest`.
+    *   Créer et démarrer un conteneur databox_app et creer un connexion avec l'url de la base de donnée: `postgres://postgres:yourpassword@db:5432/mydatabase` .
+    *   Définir les variables d'environnement (utilisateur, mot de passe, nom de la base de données).
+    *   Exposer le port 5432 pour permettre l'accès à la base de données.
+    *   Exposer le port 7860 pour permettre l'accès à l'interface frontend Gradio.
+    *   Exécuter le script SQL `sql/databox.sql` pour créer la base de données et les tables.
+    *   Créer un volume Docker pour stocker les données de la base de données de manière persistante.
+
+![Docker](images/image2.png)
+
+![app](images/image5.png)
 
 4.  **Accédez à la base de données et effectuer des requêtes SQL:**
 
@@ -48,6 +74,12 @@ Ce projet a pour objectif de créer une base de données relationnelle en Postgr
         docker exec -it postgreSQL_db psql -U postgres -d mydatabase -f docker-entrypoint-initdb.d/databox.sql
     ```
 ![app](images/image3.png)
+
+6. **Exécutez des requetes directement à partir d'une interface SQL avec gradio en frontend:**
+
+    Vous pouvez maintenant accéder à l'application app et intérroger la base de données PostgreSQL depuis votre navigateur [http://localhost:7860](http://localhost:7860/)
+
+![app](images/image4.png)
 
 6. **Gérez la base de données avec l'interface pgAdmin**
 
@@ -83,13 +115,6 @@ Ce projet a pour objectif de créer une base de données relationnelle en Postgr
 
 - Créez des DashBoards
 ![Grafana](images/image13.png)
-
-
-8. **Exécutez des requetes directement à partir d'une interface SQL avec gradio en frontend:**
-
-    Vous pouvez maintenant accéder à l'application app et intérroger la base de données PostgreSQL depuis votre navigateur [http://localhost:7860](http://localhost:7860/)
-
-![app](images/image4.png)
 
 
 ## Diagramme du Modèle Logique des Données (MLD)
