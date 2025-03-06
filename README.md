@@ -83,11 +83,11 @@ Ce projet a pour objectif de créer une base de données relationnelle en Postgr
 ![app](images/image15.png)
 
 ### Les paramétrages de Grafana
-- Connexion
+- Connexion initiale administrateur
     Utilisateur [admin]
     Mot de passe [admin]
 
-- Ajouter d'une source de données
+- Ajout d'une source de données
 ![app](images/image12.png)
 
 - Création de DashBoards
