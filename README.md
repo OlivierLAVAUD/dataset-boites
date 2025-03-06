@@ -85,14 +85,13 @@ Ce projet a pour objectif de créer une base de données relationnelle en Postgr
 
 ### Les paramétrages de Grafana
 - Connexion initiale administrateur
+```
     Utilisateur [admin]
     Mot de passe [admin]
+```
 
 - Ajout d'une source de données
 ![app](images/image12.png)
-
-
-
 
 
 8. **Exécutez des requetes directement à partir d'une interface SQL avec gradio en frontend:**
