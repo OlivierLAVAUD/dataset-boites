@@ -94,9 +94,9 @@ Ce projet a pour objectif de créer une base de données relationnelle en Postgr
 ![app](images/image12.png)
 
 
-8. **Exécutez des requetes directement à partir d'une interface SQL avec gradio en frontend:**
+8. **Exécutez des requetes directement à partir de Python avec une interface frontend Gradio:**
 
-    Vous pouvez maintenant accéder à l'application app et intérroger la base de données PostgreSQL depuis votre navigateur [http://localhost:7860](http://localhost:7860/)
+    Vous pouvez maintenant accéder à l'application app et effectuer des requêtes sur la base de données PostgreSQL depuis votre navigateur avec une interface Gradio [http://localhost:7860](http://localhost:7860/)
 
 ![app](images/image4.png)
 
