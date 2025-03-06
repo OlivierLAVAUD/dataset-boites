@@ -78,9 +78,10 @@ Ce projet a pour objectif de créer une base de données relationnelle en Postgr
 
 7. **Realisez des graphiques et des Dashboards à partir de l' interface Graphana**
 
-  Vous pouvez maintenant accéder à l'application Grafana et concevoir des Dashboard depuis votre navigateur [http://localhost:3000](http://localhost:3000)
+  Vous pouvez maintenant accéder à l'application Grafana et concevoir des Dashboards depuis votre navigateur [http://localhost:3000](http://localhost:3000)
 
 ![app](images/image15.png)
+![Grafana](images/image13.png)
 
 ### Les paramétrages de Grafana
 - Connexion initiale administrateur
@@ -90,8 +91,8 @@ Ce projet a pour objectif de créer une base de données relationnelle en Postgr
 - Ajout d'une source de données
 ![app](images/image12.png)
 
-- Création de DashBoards
-![Grafana](images/image13.png)
+
+
 
 
 8. **Exécutez des requetes directement à partir d'une interface SQL avec gradio en frontend:**
