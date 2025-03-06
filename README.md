@@ -107,11 +107,11 @@ Ce projet a pour objectif de créer une base de données relationnelle en Postgr
 
 ![app](images/image.png)
 
-* visualisez le script sql [https://github.com/OlivierLAVAUD/dataset-boites/blob/master/sql/databox.sql](databox.sql)
+* visualisez le script [sql/databox.sql](https://github.com/OlivierLAVAUD/dataset-boites/blob/master/sql/databox.sql)
 
 ## Points Clés du Brief Respectés
 
-*   **Modélisation :** Les relations entre clients, commandes et boîtes sont correctement modélisées.
+*   **Modélisation :** Les relations entre clients, c   ommandes et boîtes sont correctement modélisées.
 *   **Contraintes :** Les contraintes de dimensions (maximum 1 mètre) et de format de code client (xx-123) sont implémentées.
 *   **Calcul de prix :** La surface extérieure est calculée et stockée. Le brief mentionne un tarif dégressif en fonction des quantités, ce qui est implémenté dans la table `LIGNES_COMMANDE` avec le champ `taux_remise`.
 *   **Personnalisation :** La matière et la couleur sont gérées, et la table `MATIERE_COULEURS` permet de gérer les couleurs spécifiques à certaines matières.
