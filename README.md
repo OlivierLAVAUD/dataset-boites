@@ -103,11 +103,12 @@ Ce projet a pour objectif de créer une base de données relationnelle en Postgr
 
 ## Diagramme du Modèle Logique des Données (MLD)
 
-* visualisez le modèle MLD à partir du conenu du fichier MLD.dbml avec https://dbdiagram.io/d
+* visualisez le script [sql/databox.sql](https://github.com/OlivierLAVAUD/dataset-boites/blob/master/sql/databox.sql)
+
+* visualisez le modèle MLD généré à partir du contenu du fichier MLD.dbml avec https://dbdiagram.io/d
 
 ![app](images/image.png)
 
-* visualisez le script [sql/databox.sql](https://github.com/OlivierLAVAUD/dataset-boites/blob/master/sql/databox.sql)
 
 ## Points Clés du Brief Respectés
 
