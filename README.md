@@ -17,7 +17,7 @@ Ce projet a pour objectif de créer une base de données relationnelle en Postgr
 
 ## Prérequis
 
-*   [Docker Desktop](https://www.docker.com/products/docker-desktop/) pour un deploiement par conteneur
+*   Installation de [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
 ## Installation
 
