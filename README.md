@@ -44,16 +44,18 @@ Ce projet a pour objectif de créer une base de données relationnelle en Postgr
     ```
 
 5.  **Executer des requetes sql à partir de fichier sql:**
+
     ```bash
         docker exec -it postgreSQL_db psql -U postgres -d mydatabase -f docker-entrypoint-initdb.d/databox.sql
     ```
-![app](images/image3.png)
+    ![app](images/image3.png)
+
 
 6. **Gérez la base de données avec l'interface pgAdmin**
 
-![app](images/image7.png)
-
   Vous pouvez maintenant accéder à l'application Pgadmin et intérroger la base de données PostgreSQL depuis votre navigateur [http://localhost:5050](http://localhost:5050/)
+
+![app](images/image7.png)
 
 - Paramétrage initial
 ```bash
@@ -70,18 +72,19 @@ Ce projet a pour objectif de créer une base de données relationnelle en Postgr
 
 7. **Realisez des graphiques et des Dashboards à partir de l' interface Graphana**
 
-![app](images/image9.png)
+  Vous pouvez maintenant accéder à l'application Grafana et concevoir des Dashboard depuis votre navigateur [http://localhost:3000](http://localhost:3000)
 
-  Vous pouvez maintenant accéder à l'application Pgadmin et intérroger la base de données PostgreSQL depuis votre navigateur [http://localhost:3000](http://localhost:3000)
+![app](images/image15.png)
 
-- Connexion à Grafana
+### Les paramétrages de Grafana
+- Connexion
     Utilisateur [admin]
     Mot de passe [admin]
 
-- Ajouter la source de données db
+- Ajouter d'une source de données
 ![app](images/image12.png)
 
-- Créez des DashBoards
+- Création de DashBoards
 ![Grafana](images/image13.png)
 
 
