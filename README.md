@@ -28,13 +28,19 @@ Ce projet a pour objectif de créer une base de données relationnelle en Postgr
     cd dataset-boites
     ```
 
-3.  **Lancez le conteneur avec Docker Compose :**
+2.  **Lancez le conteneur avec Docker Compose :**
 
     ```bash
     docker-compose up -d
     ```
 
 ![app](images/image14.png)
+
+
+3.  **Accédez aux services applicatifs**
+    - app [http://localhost:7860](http://localhost:7860/)
+    - pgAdmin http://localhost:5050](http://localhost:5050/)
+    - Grafana [http://localhost:3000](http://localhost:3000)
 
 4.  **Accédez à la base de données et effectuer des requêtes SQL:**
 
