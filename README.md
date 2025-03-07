@@ -53,11 +53,14 @@ Vous pouvez maintenant accéder à l'application Grafana et concevoir des Dashbo
 <img src="images/grafana_13.png" alt="Grafana" width="800">
 
 ### Les paramétrages de Grafana
-<img src="images/grafana_1.png" alt="app" width="200">
-<img src="images/grafana_2.png" alt="app" width="200">
-<img src="images/grafana_3.png" alt="app" width="400">
-<img src="images/grafana_4.png" alt="app" width="400">
+<div style="display: flex;">
+  <img src="images/grafana_1.png" alt="app" width="200">
+  <img src="images/grafana_2.png" alt="app" width="200">
+  <img src="images/grafana_3.png" alt="app" width="200">
+</div>
+<img src="images/grafana_4.png" alt="app" width="600">
 <img src="images/grafana_5.png" alt="app" width="800">
+
 
 6. **Exécutez des requetes directement à partir d'une interface SQL avec gradio en frontend:**
 Vous pouvez maintenant accéder à l'application app et intérroger la base de données PostgreSQL depuis votre navigateur [http://localhost:7860](http://localhost:7860/)
@@ -78,7 +81,7 @@ docker exec -it databox_db psql -U admin -d databox_db -f docker-entrypoint-init
 ## Diagramme du Modèle Logique des Données (MLD)
 * visualisez le script [sql/databox.sql](https://github.com/OlivierLAVAUD/dataset-boites/blob/master/sql/databox.sql)
 * visualisez le modèle MLD généré à partir du contenu du fichier MLD.dbml avec https://dbdiagram.io/d
-<img src="images/image.png" alt="app" width="400">
+<img src="images/image.png" alt="app" width="800">
 
 ## Points Clés du Brief Respectés
 
