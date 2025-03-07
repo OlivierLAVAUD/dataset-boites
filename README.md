@@ -56,9 +56,12 @@ Vous pouvez maintenant accéder à l'application Grafana et concevoir des Dashbo
 <div style="display: flex;">
   <img src="images/grafana_1.png" alt="app" width="200">
   <img src="images/grafana_2.png" alt="app" width="200">
-  <img src="images/grafana_3.png" alt="app" width="200">
 </div>
-<img src="images/grafana_4.png" alt="app" width="600">
+<div style="display: flex;">
+  <img src="images/grafana_3.png" alt="app" width="200">
+  <img src="images/grafana_4.png" alt="app" width="600">
+</div>
+
 <img src="images/grafana_5.png" alt="app" width="800">
 
 
