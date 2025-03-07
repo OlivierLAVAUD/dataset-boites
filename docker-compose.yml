@@ -1,5 +1,5 @@
 services:
-  databox_db_srv:
+  db:
     build: ./db
     container_name: databox_db
     environment:
@@ -19,7 +19,7 @@ services:
     ports:
       - "7860:7860"
     depends_on:
-      - databox_db_srv
+      - db
 
   pgadmin:
     image: dpage/pgadmin4
@@ -30,7 +30,7 @@ services:
     ports:
       - "5050:80"
     depends_on:
-      - databox_db_srv
+      - db
 
   grafana:
     image: grafana/grafana
@@ -40,7 +40,7 @@ services:
     volumes:
       - grafana_data:/var/lib/grafana
     depends_on:
-      - databox_db_srv
+      - db
 
 volumes:
   postgres_data:

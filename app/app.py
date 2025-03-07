@@ -4,7 +4,9 @@ import os
 
 # Database connection parameters
 DATABASE_URL = os.getenv('DATABASE_URL')
+#DATABASE_URL="postgres://admin:password@databox_db_srv:5432/databox_db"
 
+print(DATABASE_URL)
 def query_database(query):
     try:
         # Connect to the PostgreSQL database
