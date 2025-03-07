@@ -66,14 +66,14 @@ Vous pouvez maintenant accéder à l'application app et intérroger la base de d
 7.  **Accédez à la base de données et effectuer des requêtes SQL:**
 Vous pouvez maintenant accéder à la base de données PostgreSQL depuis votre machine avec la commande:
 ```bash
-docker exec -it databox_db_srv psql -U admin -d databox_db
+docker exec -it databox_db psql -U admin -d databox_db
 ```
+<img src="images/docker_2.png" alt="app" width="400">
 
 8.  **Exécutez des requêtes partir de fichier sql:**
 ```bash
-docker exec -it databox_db_srv psql -U admin -d databox_db -f docker-entrypoint-initdb.d/databox.sql
+docker exec -it databox_db psql -U admin -d databox_db -f docker-entrypoint-initdb.d/databox.sql
 ```
-<img src="images/image3.png" alt="app" width="400">
 
 ## Diagramme du Modèle Logique des Données (MLD)
 * visualisez le script [sql/databox.sql](https://github.com/OlivierLAVAUD/dataset-boites/blob/master/sql/databox.sql)
