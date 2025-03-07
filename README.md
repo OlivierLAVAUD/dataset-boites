@@ -47,7 +47,8 @@ Ce projet a pour objectif de créer une base de données relationnelle en Postgr
 
   Vous pouvez maintenant accéder à l'application Pgadmin et intérroger la base de données PostgreSQL depuis votre navigateur [http://localhost:5050](http://localhost:5050/)
  
-![app](images/pgadmin_app_1.png)
+![app](images/pgadmin_1.png)
+![app](images/pgadmin_2.png)
 
 5. **Realisez des graphiques et des Dashboards à partir de l' interface Graphana**
 
@@ -77,13 +78,12 @@ Ce projet a pour objectif de créer une base de données relationnelle en Postgr
     docker exec -it databox_db_srv psql -U admin -d databox_db
     ```
 
-5.  **Exécutez des requêtes partir de fichier sql:**
+8.  **Exécutez des requêtes partir de fichier sql:**
 
     ```bash
         docker exec -it databox_db_srv psql -U admin -d databox_db -f docker-entrypoint-initdb.d/databox.sql
     ```
     ![app](images/image3.png)
-
 
 
 ## Diagramme du Modèle Logique des Données (MLD)
