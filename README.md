@@ -34,49 +34,22 @@ Ce projet a pour objectif de créer une base de données relationnelle en Postgr
     docker-compose up -d
     ```
 
-![app](images/image14.png)
+![app](images/docker_1.png)
 
 
 3.  **Accédez aux services applicatifs**
-    - app [http://localhost:7860](http://localhost:7860/)
-    - pgAdmin [http://localhost:5050](http://localhost:5050/)
-    - Grafana [http://localhost:3000](http://localhost:3000)
-
-4.  **Accédez à la base de données et effectuer des requêtes SQL:**
-
-    Vous pouvez maintenant accéder à la base de données PostgreSQL depuis votre machine avec la commande:
-    ```bash
-    docker exec -it postgreSQL_db psql -U postgres -d mydatabase
-    ```
-
-5.  **Exécutez des requêtes partir de fichier sql:**
-
-    ```bash
-        docker exec -it postgreSQL_db psql -U postgres -d mydatabase -f docker-entrypoint-initdb.d/databox.sql
-    ```
-    ![app](images/image3.png)
+    - databox_app [http://localhost:7860](http://localhost:7860/)
+    - pgAdmin_app [http://localhost:5050](http://localhost:5050/)
+    - Grafana_app [http://localhost:3000](http://localhost:3000)
 
 
-6. **Gérez la base de données avec l'interface pgAdmin**
+4. **Instanciez et Gérez la base de données avec l'interface pgAdmin**
 
   Vous pouvez maintenant accéder à l'application Pgadmin et intérroger la base de données PostgreSQL depuis votre navigateur [http://localhost:5050](http://localhost:5050/)
+ 
+![app](images/pgadmin_app_1.png)
 
-![app](images/image7.png)
-
-- Paramétrage initial
-```bash
-    Server Name [PostgreSQL]
-    Nom d'hôte / Adresse [db] 
-    Port [5432]
-    Base de données [mydatabase]
-    Utilisateur [postgres]
-    Mot de passe [yourpassword]
-    Rôle []
-    Service []
-```
-
-
-7. **Realisez des graphiques et des Dashboards à partir de l' interface Graphana**
+5. **Realisez des graphiques et des Dashboards à partir de l' interface Graphana**
 
   Vous pouvez maintenant accéder à l'application Grafana et concevoir des Dashboards depuis votre navigateur [http://localhost:3000](http://localhost:3000)
 
@@ -84,21 +57,33 @@ Ce projet a pour objectif de créer une base de données relationnelle en Postgr
 ![Grafana](images/image13.png)
 
 ### Les paramétrages de Grafana
-- Connexion initiale administrateur
-```
-    Utilisateur [admin]
-    Mot de passe [admin]
-```
+![app](images/grafana_1.png)
+![app](images/grafana_2.png)
+![app](images/grafana_3.png)
+![app](images/grafana_4.png)
+![app](images/grafana_5.png)
 
-- Ajout d'une source de données
-![app](images/image12.png)
+6. **Exécutez des requetes directement à partir d'une interface SQL avec gradio en frontend:**
 
-
-8. **Exécutez des requetes directement à partir de Python avec une interface frontend Gradio:**
-
-    Vous pouvez maintenant accéder à l'application app et effectuer des requêtes sur la base de données PostgreSQL depuis votre navigateur avec une interface Gradio [http://localhost:7860](http://localhost:7860/)
+    Vous pouvez maintenant accéder à l'application app et intérroger la base de données PostgreSQL depuis votre navigateur [http://localhost:7860](http://localhost:7860/)
 
 ![app](images/image4.png)
+
+
+7.  **Accédez à la base de données et effectuer des requêtes SQL:**
+
+    Vous pouvez maintenant accéder à la base de données PostgreSQL depuis votre machine avec la commande:
+    ```bash
+    docker exec -it databox_db_srv psql -U admin -d databox_db
+    ```
+
+5.  **Exécutez des requêtes partir de fichier sql:**
+
+    ```bash
+        docker exec -it databox_db_srv psql -U admin -d databox_db -f docker-entrypoint-initdb.d/databox.sql
+    ```
+    ![app](images/image3.png)
+
 
 
 ## Diagramme du Modèle Logique des Données (MLD)

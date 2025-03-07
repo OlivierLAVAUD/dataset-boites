@@ -2,10 +2,10 @@ services:
   databox_db_srv:
     build: ./db
     container_name: databox_db
-    environment:
-      POSTGRES_USER: ${POSTGRES_USER}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-      POSTGRES_DB: ${POSTGRES_DB}
+ #   environment:
+ #     POSTGRES_USER: admin
+ #     POSTGRES_PASSWORD: password
+ #     POSTGRES_DB: databox_db
     ports:
       - "5432:5432"
     volumes:
@@ -15,7 +15,7 @@ services:
     build: ./app
     container_name: databox_app
     environment:
-      DATABASE_URL: ${DATABASE_URL}
+      DATABASE_URL: postgres://admin:password@db:5432/databox_db
     ports:
       - "7860:7860"
     depends_on:
@@ -25,8 +25,8 @@ services:
     image: dpage/pgadmin4
     container_name: pgadmin_app
     environment:
-      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
-      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: admin
     ports:
       - "5050:80"
     depends_on:
