@@ -1,14 +1,15 @@
-services:
-  postgres:
-    extends:
-      file: ./services/postgres/docker-compose.yml
-      service: postgres
+version: '3.8'
 
-  gradio_sql:
+services:
+  db:
     extends:
-      file: ./services/gradio_sql/docker-compose.yml
-      service: gradio_sql
-      
+      file: ./services/db/docker-compose.yml
+      service: db
+
+  app:
+    extends:
+      file: ./services/app/docker-compose.yml
+      service: app
 
   pgadmin:
     extends:
@@ -19,11 +20,6 @@ services:
     extends:
       file: ./services/grafana/docker-compose.yml
       service: grafana
-
-  dashboard:
-    extends:
-      file: ./services/dashboard/docker-compose.yml
-      service: dashboard
 
   superset:
     extends:

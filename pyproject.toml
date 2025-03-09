@@ -5,6 +5,13 @@ description = "a Python app with Gradio Frontend and PostreSQL database Backend"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "daphne>=4.1.2",
+    "dash>=2.18.2",
+    "dotenv>=0.9.9",
     "gradio>=5.20.0",
+    "mysqlclient>=2.2.7",
+    "pandas>=2.2.3",
+    "psycopg2>=2.9.10",
     "psycopg2-binary>=2.9.10",
+    "sqlalchemy>=2.0.38",
 ]

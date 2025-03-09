@@ -1,0 +1,20 @@
+services:
+  superset:
+    build: .
+    container_name: superset
+    environment:
+      ADMIN_USERNAME: ${SUPERSET_ADMIN_USERNAME}
+      ADMIN_EMAIL: ${SUPERSET_ADMIN_EMAIL}
+      ADMIN_PASSWORD: ${SUPERSET_ADMIN_PASSWORD}
+#      DATABASE_URL: postgresql+psycopg2://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}
+      DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}
+
+    ports:
+      - "8088:8088"
+    volumes:
+      - ./superset_config.py:/app/superset_config.py
+      - ./superset-init.sh:/app/superset-init.sh
+    depends_on:
+      - postgres
+    networks:
+      - databox_network

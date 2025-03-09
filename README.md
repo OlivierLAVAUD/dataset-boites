@@ -10,10 +10,11 @@ Ce projet a pour objectif de créer une base de données relationnelle en Postgr
 *   Produire des analyses basiques pour valider la cohérence et l'utilité de la base de données.
 
 ## Auteur
-
 © 2025 Olivier LAVAUD
 
-![app](images/image.png)
+## Modélisation
+
+![app](images/MLD.png)
 
 ## Prérequis
 
@@ -37,10 +38,12 @@ Ce projet a pour objectif de créer une base de données relationnelle en Postgr
 ![app](images/docker_1.png)
 
 
-3.  **Accédez aux services applicatifs**
-    - databox_app [http://localhost:7860](http://localhost:7860/)
-    - pgAdmin_app [http://localhost:5050](http://localhost:5050/)
-    - Grafana_app [http://localhost:3000](http://localhost:3000)
+3.  **Accédez aux services**
+    - db_databox 
+    - app_pgAdmin   [http://localhost:5050](http://localhost:5050/)
+    - app_Grafana   [http://localhost:3000](http://localhost:3000)
+    - app_dashboard [http://localhost:8085](http://localhost:8085)
+    - app_gradio_sql[http://localhost:8085](http://localhost:8085)
 
 4. **Instanciez et Gérez la base de données avec l'interface pgAdmin**
 Vous pouvez maintenant accéder à l'application Pgadmin et intérroger la base de données PostgreSQL depuis votre navigateur [http://localhost:5050](http://localhost:5050/)
@@ -67,14 +70,18 @@ Vous pouvez maintenant accéder à l'application Grafana et concevoir des Dashbo
 Vous pouvez maintenant accéder à l'application app et intérroger la base de données PostgreSQL depuis votre navigateur [http://localhost:7860](http://localhost:7860/)
 <img src="images/image4.png" alt="app" width="400">
 
-7.  **Accédez à la base de données et effectuer des requêtes SQL:**
+7. **Visualisez des statistiques avec un Dashboard avec plotly et python:**
+    - app_dashboard [http://localhost:8085](http://localhost:8085)
+<img src="images/dashboard.png" alt="app" width="400">
+
+8.  **Accédez à la base de données et effectuer des requêtes SQL:**
 Vous pouvez maintenant accéder à la base de données PostgreSQL depuis votre machine avec la commande:
 ```bash
 docker exec -it databox_db psql -U admin -d databox_db
 ```
 <img src="images/docker_2.png" alt="app" width="400">
 
-8.  **Exécutez des requêtes partir de fichier sql:**
+9.  **Exécutez des requêtes partir de fichier sql:**
 ```bash
 docker exec -it databox_db psql -U admin -d databox_db -f docker-entrypoint-initdb.d/databox.sql
 ```
@@ -82,7 +89,7 @@ docker exec -it databox_db psql -U admin -d databox_db -f docker-entrypoint-init
 ## Diagramme du Modèle Logique des Données (MLD)
 * visualisez le script [sql/databox.sql](https://github.com/OlivierLAVAUD/dataset-boites/blob/master/sql/databox.sql)
 * visualisez le modèle MLD généré à partir du contenu du fichier MLD.dbml avec https://dbdiagram.io/d
-<img src="images/image.png" alt="app" width="800">
+<img src="images/MLD.png" alt="app" width="800">
 
 ## Points Clés du Brief Respectés
 

@@ -11,8 +11,8 @@ COPY . /app
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Make port 7860 available to the world outside this container
-EXPOSE 7860
-ENV GRADIO_SERVER_NAME="0.0.0.0"
+EXPOSE 8085
+
 
 # Run app.py when the container launches
 CMD ["python", "app.py"]

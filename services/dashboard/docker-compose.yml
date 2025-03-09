@@ -1,0 +1,13 @@
+services:
+  dashboard:
+    build: .
+    container_name: app_dashboard
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+    ports:
+      - "8085:8085"
+    depends_on:
+    - postgres
+    networks:
+    - databox_network
+

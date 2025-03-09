@@ -4,7 +4,6 @@ import os
 
 # Database connection parameters
 DATABASE_URL = os.getenv('DATABASE_URL')
-#DATABASE_URL="postgres://admin:password@databox_db_srv:5432/databox_db"
 
 print(DATABASE_URL)
 def query_database(query):
@@ -34,4 +33,5 @@ iface = gr.Interface(
 )
 
 # Launch the Gradio interface
-iface.launch(server_name="0.0.0.0", server_port=7860)
+iface.launch(server_name="0.0.0.0", server_port=7860) # for Docker
+# iface.launch(server_name="localhost", server_port=7860) # for localhost

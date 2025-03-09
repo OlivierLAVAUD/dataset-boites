@@ -4,12 +4,6 @@ services:
       file: ./services/postgres/docker-compose.yml
       service: postgres
 
-  gradio_sql:
-    extends:
-      file: ./services/gradio_sql/docker-compose.yml
-      service: gradio_sql
-      
-
   pgadmin:
     extends:
       file: ./services/pgadmin/docker-compose.yml
@@ -19,16 +13,6 @@ services:
     extends:
       file: ./services/grafana/docker-compose.yml
       service: grafana
-
-  dashboard:
-    extends:
-      file: ./services/dashboard/docker-compose.yml
-      service: dashboard
-
-  superset:
-    extends:
-      file: ./services/superset/docker-compose.yml
-      service: superset
 
 networks:
   databox_network:
