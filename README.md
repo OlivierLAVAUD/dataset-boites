@@ -75,16 +75,16 @@ Vous pouvez maintenant accéder à l'application Grafana et concevoir des Dashbo
 
 6. **Exécutez des requetes directement à partir d'une interface SQL avec gradio en frontend:**
 Vous pouvez maintenant accéder à l'application app et intérroger la base de données PostgreSQL depuis votre navigateur [http://localhost:7860](http://localhost:7860/)
-<img src="images/image4.png" alt="app" width="400">
+<img src="images/image4.png" alt="app" width="800">
 
 7. **Visualisez des statistiques avec un Dashboard avec plotly et python:**
     - app_dashboard [http://localhost:8085](http://localhost:8085)
-<img src="images/dashboard.png" alt="app" width="400">
+<img src="images/dashboard.png" alt="app" width="800">
 
 8.  **Accédez à la base de données et effectuer des requêtes SQL:**
 Vous pouvez maintenant accéder à la base de données PostgreSQL depuis votre machine avec la commande:
 ```bash
-docker exec -it databox_db psql -U admin -d databox_db
+docker exec -it db_databox psql -U admin -d databox_db
 ```
 <img src="images/docker_2.png" alt="app" width="400">
 
