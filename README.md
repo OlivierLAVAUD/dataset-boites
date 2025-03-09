@@ -46,11 +46,12 @@ Ce projet a pour objectif de créer une base de données relationnelle en Postgr
     - app_gradio_sql [http://localhost:7860](http://localhost:7860)
 
 4. **Instanciez et Gérez la base de données avec l'interface pgAdmin**
+
 Vous pouvez maintenant accéder à l'application Pgadmin et intérroger la base de données PostgreSQL depuis votre navigateur [http://localhost:5050](http://localhost:5050/)
 
-<div style="display: flex;">
-<img src="images/pgadmin_1.png" alt="app" width="400">
-<img src="images/pgadmin_2.png" alt="app" width="800">
+<div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap;">
+    <img src="images/pgadmin_1.png" alt="app" width="400" style="margin: 10px;">
+    <img src="images/pgadmin_2.png" alt="app" width="800" style="margin: 10px;">
 </div>
 
 
