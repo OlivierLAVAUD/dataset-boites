@@ -73,6 +73,7 @@ Vous pouvez maintenant accéder à l'application Grafana et concevoir des Dashbo
   <img src="images/grafana_3.png" alt="app" width="400">
 </div>
 
+
 6. **Exécutez des requetes directement à partir d'une interface SQL avec gradio en frontend:**
 Vous pouvez maintenant accéder à l'application app et intérroger la base de données PostgreSQL depuis votre navigateur [http://localhost:7860](http://localhost:7860/)
 <img src="images/image4.png" alt="app" width="800">
@@ -86,11 +87,11 @@ Vous pouvez maintenant accéder à la base de données PostgreSQL depuis votre m
 ```bash
 docker exec -it db_databox psql -U admin -d databox_db
 ```
-<img src="images/docker_2.png" alt="app" width="400">
+<img src="images/docker_2.png" alt="app" width="600">
 
 9.  **Exécutez des requêtes partir de fichier sql:**
 ```bash
-docker exec -it databox_db psql -U admin -d databox_db -f docker-entrypoint-initdb.d/databox.sql
+docker exec -it db_databox psql -U admin -d databox_db -f docker-entrypoint-initdb.d/databox.sql
 ```
 
 ## Diagramme du Modèle Logique des Données (MLD)
