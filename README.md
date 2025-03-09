@@ -47,13 +47,19 @@ Ce projet a pour objectif de créer une base de données relationnelle en Postgr
 
 4. **Instanciez et Gérez la base de données avec l'interface pgAdmin**
 Vous pouvez maintenant accéder à l'application Pgadmin et intérroger la base de données PostgreSQL depuis votre navigateur [http://localhost:5050](http://localhost:5050/)
+
+<div style="display: flex;">
 <img src="images/pgadmin_1.png" alt="app" width="400">
 <img src="images/pgadmin_2.png" alt="app" width="800">
+</div>
+
 
 5. **Realisez des graphiques et des Dashboards à partir de l'interface Graphana**
 Vous pouvez maintenant accéder à l'application Grafana et concevoir des Dashboards depuis votre navigateur [http://localhost:3000](http://localhost:3000)
+<div style="display: flex;">
 <img src="images/grafana_15.png" alt="app" width="800">
 <img src="images/grafana_13.png" alt="Grafana" width="800">
+</div>
 
 ### Les paramétrages de Grafana
 <div style="display: flex;">
@@ -61,10 +67,11 @@ Vous pouvez maintenant accéder à l'application Grafana et concevoir des Dashbo
   <img src="images/grafana_2.png" alt="app" width="200">
   <img src="images/grafana_3.png" alt="app" width="400">
 </div>
+
 <div style="display: flex;">
-
 <img src="images/grafana_5.png" alt="app" width="800">
-
+  <img src="images/grafana_3.png" alt="app" width="400">
+</div>
 
 6. **Exécutez des requetes directement à partir d'une interface SQL avec gradio en frontend:**
 Vous pouvez maintenant accéder à l'application app et intérroger la base de données PostgreSQL depuis votre navigateur [http://localhost:7860](http://localhost:7860/)
