@@ -43,7 +43,7 @@ Ce projet a pour objectif de créer une base de données relationnelle en Postgr
     - app_pgAdmin   [http://localhost:5050](http://localhost:5050/)
     - app_Grafana   [http://localhost:3000](http://localhost:3000)
     - app_dashboard [http://localhost:8085](http://localhost:8085)
-    - app_gradio_sql[http://localhost:8085](http://localhost:8085)
+    - app_gradio_sql [http://localhost:7860](http://localhost:8085)
 
 4. **Instanciez et Gérez la base de données avec l'interface pgAdmin**
 Vous pouvez maintenant accéder à l'application Pgadmin et intérroger la base de données PostgreSQL depuis votre navigateur [http://localhost:5050](http://localhost:5050/)
