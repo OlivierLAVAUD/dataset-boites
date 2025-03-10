@@ -9,6 +9,9 @@ Ce projet a pour objectif de créer une base de données relationnelle en Postgr
 *   Automatiser la logique de gestion des contraintes.
 *   Produire des analyses basiques pour valider la cohérence et l'utilité de la base de données.
 
+[Rapport Databox](https://github.com/OlivierLAVAUD/dataset-boites/blob/master/docs/Rapport%20Databox.pdf)
+
+
 ## Auteur
 © 2025 Olivier LAVAUD
 
