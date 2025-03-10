@@ -1,5 +1,5 @@
   services:
-  airflow:
+    airflow:
       image: apache/airflow:2.3.0
       container_name: airflow_webserver
       environment:

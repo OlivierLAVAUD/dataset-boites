@@ -43,4 +43,5 @@ networks:
 volumes:
   postgres_data:
   grafana_data:
+  airflow_dags:
 
