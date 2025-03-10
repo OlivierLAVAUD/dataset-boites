@@ -25,6 +25,12 @@ services:
       file: ./services/dashboard/docker-compose.yml
       service: dashboard
 
+  airflow:
+    extends:
+      file: ./services/airflow/docker-compose.yml
+      service: airflow
+
+
   superset:
     extends:
       file: ./services/superset/docker-compose.yml
