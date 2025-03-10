@@ -121,7 +121,7 @@ docker exec -it db_databox psql -U admin -d databox_db -f docker-entrypoint-init
 
 * [Airflow](http://localhost:8080)
 <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap;">
-  <img src="images/airflow.png" alt="app" width="400">
+  <img src="images/airflow.png" alt="app" width="600">
 </div>
 
 
