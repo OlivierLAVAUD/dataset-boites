@@ -128,7 +128,7 @@ docker exec -it db_databox psql -U admin -d databox_db -f docker-entrypoint-init
 
 ## Statistiques avec Dashboards réalisées Grafana à partir de vues SQL
 
-* visualisez le script des vues [services/postrgres/sql/viewssql](https://github.com/OlivierLAVAUD/dataset-boites/blob/master/services/postgres/sql/views.sql)
+* visualisez le script des vues [services/postrgres/sql/views.sql](https://github.com/OlivierLAVAUD/dataset-boites/blob/master/services/postgres/sql/views.sql)
 
 
 <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap;">
