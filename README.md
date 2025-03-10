@@ -103,8 +103,8 @@ docker exec -it db_databox psql -U admin -d databox_db -f docker-entrypoint-init
 ## Diagramme du Modèle Logique des Données (MLD) et UML
 * visualisez le modèle UML généré à partir du contenu du fichier databox.uml avec [plantuml](https://www.plantuml.com)
 <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap;">
-  <img src="images/databox_uml.png" alt="app" width="600">
-<\div>
+  <img src="images/databox_uml.png" alt="app" width="400">
+</div>
 
 * visualisez le modèle MLD généré à partir du contenu du fichier MLD.dbml avec [dbdiagram](https://dbdiagram.io/d)
 
