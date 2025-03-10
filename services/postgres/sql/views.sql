@@ -1,4 +1,4 @@
--- Vues
+-- 1. Nombre total de commandes par client
 CREATE OR REPLACE VIEW v1 AS
 SELECT
     c.id_client,
@@ -13,7 +13,7 @@ GROUP BY
 ORDER BY
     nombre_commandes DESC;
 
-
+-- 2. Chiffre d'affaires total par client
 CREATE OR REPLACE VIEW v2 AS
 SELECT
     c.id_client,
@@ -30,6 +30,7 @@ GROUP BY
 ORDER BY
     chiffre_affaires DESC;
 
+-- 3. Chiffre d'affaires total par mois en 2024
 CREATE OR REPLACE VIEW v3 AS
 SELECT
     TO_CHAR(co.date_commande, 'YYYY-MM') AS mois,
@@ -45,6 +46,7 @@ GROUP BY
 ORDER BY
     mois;
 
+-- 4 Top 5 des boîtes les plus vendues
 CREATE OR REPLACE VIEW v4 AS
 SELECT
     b.id_boite,
@@ -65,7 +67,7 @@ ORDER BY
     quantite_vendue DESC
 LIMIT 5;
 
-
+-- 5. Top 5 des boîtes les plus rentables
 
 CREATE OR REPLACE VIEW v5 AS
 SELECT
@@ -87,6 +89,9 @@ ORDER BY
     chiffre_affaires DESC
 LIMIT 5;
 
+
+-- 6. Nombre total de commandes et chiffre d'affaires par matière
+
 CREATE OR REPLACE VIEW v6 AS
 SELECT
     m.nom_matiere,
@@ -104,7 +109,9 @@ GROUP BY
     m.nom_matiere
 ORDER BY
     chiffre_affaires DESC;
-	
+
+-- 7. Nombre total de commandes et chiffre d'affaires par couleur
+
 CREATE OR REPLACE VIEW v7 AS
 SELECT
     c.nom_couleur,
@@ -123,6 +130,7 @@ GROUP BY
 ORDER BY
     chiffre_affaires DESC;
 
+-- 8. Répartition des commandes par jour de la semaine
 
 CREATE OR REPLACE VIEW v8 AS
 SELECT
