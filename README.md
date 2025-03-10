@@ -71,7 +71,6 @@ Vous pouvez maintenant accéder à l'application Grafana et concevoir des Dashbo
 
 <div style="display: flex;">
 <img src="images/grafana_5.png" alt="app" width="800">
-  <img src="images/grafana_3.png" alt="app" width="400">
 </div>
 
 
@@ -98,6 +97,7 @@ docker exec -it db_databox psql -U admin -d databox_db -f docker-entrypoint-init
 ## Diagramme du Modèle Logique des Données (MLD)
 * visualisez le script [sql/databox.sql](https://github.com/OlivierLAVAUD/dataset-boites/blob/master/sql/databox.sql)
 * visualisez le modèle MLD généré à partir du contenu du fichier MLD.dbml avec https://dbdiagram.io/d
+
 <img src="images/MLD.png" alt="app" width="800">
 
 ## Points Clés du Brief Respectés
