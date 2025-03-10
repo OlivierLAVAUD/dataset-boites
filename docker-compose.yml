@@ -30,6 +30,10 @@ services:
       file: ./services/airflow/docker-compose.yml
       service: airflow
 
+  airflow_sheduler:
+    extends:
+      file: ./services/airflow/docker-compose.yml
+      service: airflow_scheduler
 
   superset:
     extends:
