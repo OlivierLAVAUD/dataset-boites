@@ -107,5 +107,14 @@ docker exec -it db_databox psql -U admin -d databox_db -f docker-entrypoint-init
 *   **Calcul de prix :** La surface extérieure est calculée et stockée. Le brief mentionne un tarif dégressif en fonction des quantités, ce qui est implémenté dans la table `LIGNES_COMMANDE` avec le champ `taux_remise`.
 *   **Personnalisation :** La matière et la couleur sont gérées, et la table `MATIERE_COULEURS` permet de gérer les couleurs spécifiques à certaines matières.
 
+## Statistiques avec Dashboard réalisées Grafana à partir de vues SQL
+
+* visualisez le script des vues [services/postrgres/sql/viewssql](https://github.com/OlivierLAVAUD/dataset-boites/blob/master/services/postgres/sql/views.sql)
 
 
+<div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap;">
+  <img src="images/d1.png" alt="app" width="400">
+  <img src="images/d2.png" alt="app" width="400">
+  <img src="images/d3.png" alt="app" width="400">
+  <img src="images/d4.png" alt="app" width="400">
+</div>
