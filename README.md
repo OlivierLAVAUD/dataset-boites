@@ -95,7 +95,7 @@ docker exec -it db_databox psql -U admin -d databox_db -f docker-entrypoint-init
 ```
 
 ## Diagramme du Modèle Logique des Données (MLD)
-* visualisez le script [sql/databox.sql](https://github.com/OlivierLAVAUD/dataset-boites/blob/master/sql/databox.sql)
+* visualisez le script [services/postrgres/sql/databox.sql](https://github.com/OlivierLAVAUD/dataset-boites/blob/master/services/postrgres/sql/databox.sql)
 * visualisez le modèle MLD généré à partir du contenu du fichier MLD.dbml avec https://dbdiagram.io/d
 
 <img src="images/MLD.png" alt="app" width="800">
