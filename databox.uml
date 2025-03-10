@@ -1,0 +1,50 @@
+@startuml
+class Client {
+    + id_client : String
+    + nom_client : String
+    + email_client : String
+    + adresse_client : String
+}
+
+class Commande {
+    + id_commande : int
+    + date_commande : Date
+}
+
+class LigneCommande {
+    + quantite : int
+    + prix_unitaire : Decimal
+    + taux_remise : Decimal
+}
+
+class Boite {
+    + id_boite : int
+    + longueur_mm : int
+    + largeur_mm : int
+    + hauteur_mm : int
+    + surface_exterieure_mm2 : Decimal
+}
+
+class Matiere {
+    + id_matiere : int
+    + nom_matiere : String
+}
+
+class Couleur {
+    + id_couleur : int
+    + nom_couleur : String
+}
+
+class MatiereCouleur {
+    + id_matiere : int
+    + id_couleur : int
+}
+
+Client "1" -- "0..*" Commande : passe
+Commande "1" -- "0..*" LigneCommande : contient
+LigneCommande "1" -- "1" Boite : correspond à
+Boite "1" -- "1" Matiere : composée de
+Boite "1" -- "1" Couleur : colorée en
+Matiere "1" -- "0..*" MatiereCouleur
+Couleur "1" -- "0..*" MatiereCouleur
+@enduml
