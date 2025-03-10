@@ -117,6 +117,12 @@ docker exec -it db_databox psql -U admin -d databox_db -f docker-entrypoint-init
 * visualisez le script [services/postrgres/sql/databox.sql](https://github.com/OlivierLAVAUD/dataset-boites/blob/master/services/postgres/sql/databox.sql)
 
 
+10. Gérer les pipelines ETL avec Airflow (DAGs)
+
+* [Airflow](http://localhost:8080)
+<div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap;">
+  <img src="airflow.png" alt="app" width="400">
+</div>
 
 
 
