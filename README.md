@@ -123,4 +123,8 @@ docker exec -it db_databox psql -U admin -d databox_db -f docker-entrypoint-init
   <img src="images/d2.png" alt="app" width="400">
   <img src="images/d3.png" alt="app" width="400">
   <img src="images/d4.png" alt="app" width="400">
+  <img src="images/d5.png" alt="app" width="400">
+  <img src="images/d6.png" alt="app" width="400">
+  <img src="images/d7.png" alt="app" width="400">
+  <img src="images/d8.png" alt="app" width="400">
 </div>
