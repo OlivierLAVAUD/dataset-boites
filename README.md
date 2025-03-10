@@ -30,10 +30,16 @@ Ce projet a pour objectif de créer une base de données relationnelle en Postgr
     ```
 
 2.  **Lancez le conteneur avec Docker Compose :**
-
+- Pour lancer tous les services tapez la commande ci-dessous
     ```bash
     docker-compose up -d
     ```
+- Pour lancer les services essentiels et minimaux
+    ```bash
+    docker-compose up postrgres grafana
+    ```
+
+
 
 ![app](images/docker_1.png)
 
@@ -107,7 +113,7 @@ docker exec -it db_databox psql -U admin -d databox_db -f docker-entrypoint-init
 *   **Calcul de prix :** La surface extérieure est calculée et stockée. Le brief mentionne un tarif dégressif en fonction des quantités, ce qui est implémenté dans la table `LIGNES_COMMANDE` avec le champ `taux_remise`.
 *   **Personnalisation :** La matière et la couleur sont gérées, et la table `MATIERE_COULEURS` permet de gérer les couleurs spécifiques à certaines matières.
 
-## Statistiques avec Dashboard réalisées Grafana à partir de vues SQL
+## Statistiques avec Dashboards réalisées Grafana à partir de vues SQL
 
 * visualisez le script des vues [services/postrgres/sql/viewssql](https://github.com/OlivierLAVAUD/dataset-boites/blob/master/services/postgres/sql/views.sql)
 
