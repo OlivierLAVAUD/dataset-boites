@@ -110,7 +110,7 @@ docker exec -it db_databox psql -U admin -d databox_db -f docker-entrypoint-init
   <img src="images/databox_uml.png" alt="app" width="400">
 </div>
 
-* visualisez le modèle MLD généré à partir du contenu du fichier  [MLD.dbml](https://github.com/OlivierLAVAUD/dataset-boites/blob/master/docs/mld.dbml) avec [dbdiagram](https://dbdiagram.io/d)
+* visualisez le modèle MLD généré à partir du contenu du fichier  [mld.dbml](https://github.com/OlivierLAVAUD/dataset-boites/blob/master/docs/mld.dbml) avec [dbdiagram](https://dbdiagram.io/d)
 
 <img src="images/MLD.png" alt="app" width="800">
 
