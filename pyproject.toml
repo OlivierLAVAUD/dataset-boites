@@ -1,7 +1,7 @@
 [project]
 name = "databox"
 version = "0.1.0"
-description = "a Python app with Gradio Frontend and PostreSQL database Backend"
+description = "The Databox Project ©2025 Olivier LAVAUD"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
