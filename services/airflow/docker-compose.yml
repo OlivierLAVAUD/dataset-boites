@@ -1,8 +1,6 @@
-
 services:
-
   airflow:
-    image: apache/airflow:2.3.0
+    build: .
     container_name: airflow_webserver
     environment:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
@@ -16,10 +14,10 @@ services:
       - databox_network
     depends_on:
       - postgres
-    entrypoint: ["bash", "-c", "airflow db init && airflow webserver && airflow users create --username admin --firstname Admin --lastname User --email admin@example.com --role Admin --password adminpassword && airflow webserver"]
+    entrypoint: ["bash", "-c", "airflow db init && airflow users create --username admin --firstname Admin --lastname User --email admin@example.com --role Admin --password adminpassword && airflow webserver"]
 
   airflow_scheduler:
-    image: apache/airflow:2.3.0
+    build: .
     container_name: airflow_scheduler
     environment:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
@@ -31,3 +29,20 @@ services:
     depends_on:
       - postgres
     entrypoint: ["airflow", "scheduler"]
+
+  postgres:
+    image: postgres:13
+    container_name: postgres
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    networks:
+      - databox_network
+
+volumes:
+  airflow_dags:
+
+networks:
+  databox_network:
+    driver: bridge

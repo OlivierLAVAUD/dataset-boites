@@ -8,7 +8,6 @@ services:
     extends:
       file: ./services/gradio_sql/docker-compose.yml
       service: gradio_sql
-      
 
   pgadmin:
     extends:
@@ -30,7 +29,7 @@ services:
       file: ./services/airflow/docker-compose.yml
       service: airflow
 
-  airflow_sheduler:
+  airflow_scheduler:
     extends:
       file: ./services/airflow/docker-compose.yml
       service: airflow_scheduler
@@ -48,4 +47,4 @@ volumes:
   postgres_data:
   grafana_data:
   airflow_dags:
-
+  superset_data:  

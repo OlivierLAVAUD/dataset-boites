@@ -1,31 +1,28 @@
-# Utilisation de l'image officielle d'Airflow
 FROM apache/airflow:2.3.0
 
-# Spécifie l'utilisateur qui va exécuter Airflow (facultatif)
-USER root
+# Passer en utilisateur airflow pour installer les paquets
+USER airflow
 
-# Installer des dépendances supplémentaires si nécessaire
+# Installer psycopg2-binary sous l'utilisateur airflow
 RUN pip install --no-cache-dir psycopg2-binary
 
-# Créer des répertoires pour stocker les DAGs et logs
+# Revenir à root pour créer les dossiers nécessaires
+USER root
+
 RUN mkdir -p /opt/airflow/dags /opt/airflow/logs
 
-# Définir l'emplacement des DAGs (ce répertoire sera monté avec un volume)
+# Définir les variables d’environnement
 ENV AIRFLOW_HOME=/opt/airflow
-
-# Définir les variables d'environnement nécessaires à la connexion à PostgreSQL
 ENV AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://$POSTGRES_USER:$POSTGRES_PASSWORD@postgres:5432/$POSTGRES_DB
 ENV AIRFLOW__CORE__EXECUTOR=LocalExecutor
-
-# Définir le répertoire des logs
 ENV AIRFLOW__CORE__BASE_LOG_FOLDER=/opt/airflow/logs
 
-# Copier des DAGs ou des fichiers de configuration spécifiques, si nécessaire
-# COPY ./dags /opt/airflow/dags
-
-# Exposer le port 8080 pour accéder à l'interface web d'Airflow
+# Exposer le port 8080 pour Airflow
 EXPOSE 8080
 
-# Lancer Airflow avec un gestionnaire de processus
+# Passer de nouveau à airflow pour exécuter Airflow
+USER airflow
+
+# Lancer le webserver
 ENTRYPOINT ["airflow"]
-CMD ["webserver"]
+CMD ["scheduler"]

@@ -12,3 +12,4 @@ wheels/
 hello.py
 /versions
 /services/dashboard/versions
+/services/airflow/versions
