@@ -1,15 +1,14 @@
 FROM apache/airflow:2.3.0
 
-# Passer en utilisateur airflow pour installer les paquets
+# Utilisation directe de l'utilisateur airflow (déjà configuré dans l’image officielle)
 USER airflow
 
-# Installer psycopg2-binary sous l'utilisateur airflow
-RUN pip install --no-cache-dir psycopg2-binary
 
-# Revenir à root pour créer les dossiers nécessaires
-USER root
+# Copier le fichier DAG (test_postgres_dag.py) dans le répertoire approprié de l'image
+COPY ./dags/test_postgres_dag.py /opt/airflow/dags/
 
-RUN mkdir -p /opt/airflow/dags /opt/airflow/logs
+# Installer les dépendances nécessaires en une seule ligne
+RUN pip install --no-cache-dir apache-airflow-providers-postgres
 
 # Définir les variables d’environnement
 ENV AIRFLOW_HOME=/opt/airflow
@@ -20,9 +19,6 @@ ENV AIRFLOW__CORE__BASE_LOG_FOLDER=/opt/airflow/logs
 # Exposer le port 8080 pour Airflow
 EXPOSE 8080
 
-# Passer de nouveau à airflow pour exécuter Airflow
-USER airflow
-
-# Lancer le webserver
+# Lancer le webserver par défaut
 ENTRYPOINT ["airflow"]
-CMD ["scheduler"]
+CMD ["webserver"]

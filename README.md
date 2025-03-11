@@ -41,7 +41,7 @@ Ce projet a pour objectif de créer une base de données relationnelle en Postgr
     ```bash
     docker-compose up postrgres grafana
     ```
-
+docker-compose up -d --build airflow_scheduler
 
 
 ![app](images/docker_1.png)
@@ -53,7 +53,8 @@ Ce projet a pour objectif de créer une base de données relationnelle en Postgr
     - app_Grafana   [http://localhost:3000](http://localhost:3000)
     - app_dashboard [http://localhost:8085](http://localhost:8085)
     - app_gradio_sql [http://localhost:7860](http://localhost:7860)
-    - airflow [http://localhost:8080](http://localhost:8080)
+    - airflow        [http://localhost:8080](http://localhost:8080)
+    - airflow_scheduler
 
 4. **Instanciez et Gérez la base de données avec l'interface pgAdmin**
 

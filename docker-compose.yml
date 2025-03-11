@@ -47,4 +47,6 @@ volumes:
   postgres_data:
   grafana_data:
   airflow_dags:
+  airflow_logs:
+  airflow_plugins:
   superset_data:  
