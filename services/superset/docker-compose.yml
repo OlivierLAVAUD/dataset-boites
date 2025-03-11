@@ -12,8 +12,8 @@ services:
     ports:
       - "8088:8088"
     volumes:
-      - ./superset_config.py:/app/superset_config.py
-      - ./superset-init.sh:/app/superset-init.sh
+      -  ./superset_config.py:/app/superset_config.py
+      -  ./superset-init.sh:/app/superset-init.sh
     depends_on:
       - postgres
     networks:
